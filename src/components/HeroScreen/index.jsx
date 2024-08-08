@@ -9,31 +9,38 @@ import {
     ImagePlaceholder, 
     PlaceholderImage 
 } from "./HeroScreenElements"
-import fitnessPlaceholder1 from "../../assets/images/fitnessPlaceholder11.jpg"
+import fitnessPlaceholder from "../../assets/images/fitnessPlaceholder11.jpg"
 import { HERO_DESCRIPTION, HERO_TITLE } from '../../assets/texts/homeTexts';
+import { useNavigate } from 'react-router-dom';
 
 function HeroScreen() {
-    return (
-        <Container>
-          <Header>
-            <Title>{HERO_TITLE}</Title>
+  const navigate = useNavigate();
 
-            <Description>{HERO_DESCRIPTION}</Description>
+  const handleLearnMoreClick = () => {
+    navigate("/aboutus")
+  }
 
-            <ButtonContainer>
-              <Button $primary>Sign Up</Button>
-              <Button>Learn More</Button>
-            </ButtonContainer>
-          </Header>
-          
-          <ImagePlaceholder>
-            <PlaceholderImage
-              src={fitnessPlaceholder1}
-              alt="Fitness Placeholder"
-            />
-          </ImagePlaceholder>
-        </Container>
-      );
+  return (
+    <Container>
+      <Header>
+        <Title>{HERO_TITLE}</Title>
+
+        <Description>{HERO_DESCRIPTION}</Description>
+
+        <ButtonContainer>
+          <Button $primary>Sign Up</Button>
+          <Button onClick={handleLearnMoreClick}>Learn More</Button>
+        </ButtonContainer>
+      </Header>
+
+      <ImagePlaceholder>
+        <PlaceholderImage
+          src={fitnessPlaceholder}
+          alt="Fitness Placeholder"
+        />
+      </ImagePlaceholder>
+    </Container>
+  );
 }
 
 export default HeroScreen
