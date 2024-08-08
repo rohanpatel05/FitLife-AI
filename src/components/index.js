@@ -3,3 +3,4 @@ export { default as Footer } from "./Footer";
 export { default as HeroScreen } from "./HeroScreen";
 export { default as HomeDietSection } from "./HomeDietSection";
 export { default as HomeWorkoutSection } from "./HomeWorkoutSection";
+export { default as HomeReviewsSection } from "./HomeReviewsSections";

@@ -1,5 +1,5 @@
 import React from "react";
-import { Footer, HeroScreen, HomeDietSection, HomeWorkoutSection } from "../../components"
+import { Footer, HeroScreen, HomeDietSection, HomeReviewsSection, HomeWorkoutSection } from "../../components"
 
 function Landing() {
   return (
@@ -7,6 +7,7 @@ function Landing() {
     <HeroScreen />
     <HomeDietSection />
     <HomeWorkoutSection />
+    <HomeReviewsSection />
     <Footer />
   </>
 );
