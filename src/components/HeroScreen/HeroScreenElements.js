@@ -3,7 +3,7 @@ import colors from "../../configs/colors";
 
 export const Container = styled.div`
   text-align: center;
-  padding: 2rem;
+  padding: 4rem 2rem;
 `;
 
 export const Header = styled.header`
@@ -63,6 +63,11 @@ export const ImagePlaceholder = styled.div`
 `;
 
 export const PlaceholderImage = styled.img`
-  width: 85%;
+  width: 90%;
   height: auto;
+  background-color: ${colors.grey};
+
+  @media (max-width: 535px) {
+    width: 100%;
+  }
 `;
